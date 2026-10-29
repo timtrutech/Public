@@ -1,0 +1,32 @@
+GENERATE FORENSITAZUREID.XML FILE
+1.	Open Powershell
+2.	Run Save-AzureADUser.ps1
+3.	Log in with the Global Administrator
+4.	Check the box "Consent on behalf of your organization
+5.	Click "Accept"
+6.	Log in again (if needed)
+
+PREPARE AND MIGRATE
+1.	Log into the computer as an Administrator (can be local admin or domain admin)
+2.	Copy the previously created "ForensiTAzureID.xml" file to the computer where Profwiz.msi is located
+3.	Run Profwiz.msi
+1.	Accept the agreement then click "Install"
+2.	Check the box next to "Launch User Profile Wizard Freeware Edition"
+3.	Click "Finish"
+4.	Click "Next"
+5.	Select the profile from the list then click "Next"
+6.	Type in the primary domain (ie. microsoft.com)
+7.	Uncheck "Join Domain"
+8.	Check "Azure AD"
+9.	Under "Enter the account name", type in the users' login/email address
+10.	Uncheck "Set as default logon"
+11.	Click "Next"
+12.	After it completes, click "Next"
+13.	Click "Finish"
+14.	The computer will reboot
+15.	Log back in as an Administrator
+16.	If there are multiple users to migrate then repeat steps 3-15 for each user
+17.	Remove the computer from the domain and reboot
+18.	Add the computer to Entra/Intune
+19.	Log into the computer as the user and verify that the profile transferred
+20.	Verify that Outlook, Teams, and OneDrive are connected
